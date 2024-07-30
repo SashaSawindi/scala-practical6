@@ -1,4 +1,4 @@
-object StudentManaging {
+object p62 {
 
   case class Student(
       name: String,
