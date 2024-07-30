@@ -1,4 +1,4 @@
-object InventorySystem {
+object InventorySystem extends App {
 
   case class Product(name: String, quantity: Int, price: Double)
 
@@ -13,7 +13,7 @@ object InventorySystem {
     104 -> Product("ProductD", 15, 40.0)
   )
 
-  val productNames: Iterable[String] = inventory1.values.map(_.name)
+  val productNames: List[String] = inventory1.values.toList.map(_.name)
   println(s"Product names in inventory1: $productNames")
 
   val totalValue: Double = inventory1.values.map(p => p.quantity * p.price).sum
